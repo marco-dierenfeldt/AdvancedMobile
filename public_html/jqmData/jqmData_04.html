@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello Mobile</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <div id="jqmDataPage04" data-role="page">
+
+            <div id="jqmDataPage04Header" data-role="header" data-position="fixed">
+                <a href="#startPage">Start</a>
+                <h3>jqmData Page 4</h3>
+            </div>
+            <div id="jqmDataPage04Content" data-role="content">
+                Laden einer neuen Page mit jQueryMobile loadPage()<br/>
+                <a href="#" id="loadButton3" data-role="button" data-inline="true">load Page</a>
+                <a href="#jqmDataPage05" id="gotoPage5Button" data-role="button" data-inline="true">Page 5</a>
+                <div id="output"></div>
+                <script>
+                    $(document).on("click", "#loadButton3", function(){
+                        $.mobile.loadPage( "jqmData_05.html");
+                    });
+                </script>
+            </div>
+            <div id="jqmDataPage04Footer" data-role="footer"
+                 data-position="fixed"></div>
+        </div>
+    </body>
+</html>

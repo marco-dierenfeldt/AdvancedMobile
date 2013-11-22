@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello Mobile</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="css/libs/jquery.mobile-1.3.0.css" rel="stylesheet" type="text/css"/>
+        <script src="js/libs/jquery-1.9.1.js" type="text/javascript"></script>
+        <script src="js/libs/jquery.mobile-1.3.0.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div id="checkRadioPage01" data-role="page">
+
+            <div id="checkRadioPage01Header" data-role="header" data-position="fixed">
+                <a href="#startPage">Start</a>
+                <h3>Checkbox Radiobutton Page 1</h3>
+            </div>
+            <div id="checkRadioPage01Content" data-role="content">
+                <label><input type="checkbox" name="checkbox-0" />Schokolade</label>
+
+                <label><input type="checkbox" name="checkbox-1" data-iconpos="right"/>Vanille</label>
+
+                <input type="checkbox" name="checkbox-2" id="checkbox-2" data-mini="true"/>
+                <label for="checkbox-2">Erdbeer</label>
+
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup">
+                        <legend>Einverständniserklärung:</legend>
+                        <input type="checkbox" name="checkbox-3" id="checkbox-3" class="custom" />
+                        <label for="checkbox-3">Ich bin mit den Datenschutzbestimmungen einverstanden</label>
+                    </fieldset>
+                </div>
+
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup">
+                        <legend>Checkliste:</legend>
+                        <input type="checkbox" name="checkbox-1a" id="checkbox-1a" class="custom" />
+                        <label for="checkbox-1a">einsteigen</label>
+                        <input type="checkbox" name="checkbox-2a" id="checkbox-2a" class="custom" />
+                        <label for="checkbox-2a">anschnallen</label>
+                        <input type="checkbox" name="checkbox-3a" id="checkbox-3a" class="custom" />
+                        <label for="checkbox-3a">Motor starten</label>
+                        <input type="checkbox" name="checkbox-4a" id="checkbox-4a" class="custom" />
+                        <label for="checkbox-4a">losfahren</label>
+                    </fieldset>
+                </div>
+
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup" data-type="horizontal">
+                        <legend>Farbkanäle:</legend>
+                        <input type="checkbox" name="checkbox-1b" id="checkbox-1b" class="custom" />
+                        <label for="checkbox-1b">red</label>
+                        <input type="checkbox" name="checkbox-2b" id="checkbox-2b" class="custom" />
+                        <label for="checkbox-2b">green</label>
+                        <input type="checkbox" name="checkbox-3b" id="checkbox-3b" class="custom" />
+                        <label for="checkbox-3b">blue</label>
+                        <input type="checkbox" name="checkbox-4b" id="checkbox-4b" class="custom" />
+                        <label for="checkbox-4b">alpha</label>
+                    </fieldset>
+                </div>
+            </div>
+            <div id="checkRadioPage01Footer" data-role="footer"
+                 data-position="fixed"></div>
+        </div>
+    </body>
+</html>

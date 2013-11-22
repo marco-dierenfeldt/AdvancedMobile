@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello Mobile</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <div id="jqmDataPage03" data-role="page">
+
+            <div id="jqmDataPage03Header" data-role="header" data-position="fixed">
+                <a href="#startPage">Start</a>
+                <h3>jqmData Page 3</h3>
+            </div>
+            <div id="jqmDataPage03Content" data-role="content">
+                Laden einer Liste mit jQueryMobile, die vorher lokal abgespeichert wurde mit jqmData()<br/>
+                <a href="#" id="saveButton" data-role="button" data-inline="true">save jqmData</a>
+                <a href="#" id="loadButton2" data-role="button" data-inline="true">load jqmData</a>
+                <ul id="cityList3" data-role="listview" data-inset="true">
+                </ul>
+                    <div id="output"></div>
+                <script>
+                    $(document).on("click", "#saveButton", function(){
+                        var localData = ["München","Stuttgart","Frankfurt","Coburg","Dresden","Berlin"];
+                        $("#startPage").jqmData("cities", localData);
+                    });
+                    $(document).on("click", "#loadButton2", function(){
+                        var data = $("#startPage").jqmData("cities");
+                        alert(data.length);
+                        for(var i in data){
+                            $("#cityList3").append("<li>"+data[i]+"</li>");
+                        }
+                        $("#cityList3").listview( "refresh" );
+                    });
+                </script>
+
+            </div>
+            <div id="jqmDataPage03Footer" data-role="footer"
+                 data-position="fixed"></div>
+        </div>
+    </body>
+</html>

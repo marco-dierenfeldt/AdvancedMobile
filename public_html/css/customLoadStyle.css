@@ -1,0 +1,18 @@
+/*
+    Document   : customLoadStyle
+    Author     : marco.dierenfeldt
+    Description:
+        Gestaltung des angepassten HTML-Ladelabels.
+*/
+
+.custom-load-swatch {
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: darkslateblue;
+
+    border-color: black;
+    border-radius: 10px;
+    border-style: dashed;
+}
+

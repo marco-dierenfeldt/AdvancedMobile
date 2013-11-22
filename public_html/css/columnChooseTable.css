@@ -1,0 +1,36 @@
+/*
+    Document   : columnChooseTable
+    Author     : marco.dierenfeldt
+    Description:
+        Stylesheet für eine individualisierte columnChooseTable.
+
+        Angepasstes Beispiel von
+        http://api.jquerymobile.com/table-columntoggle/
+*/
+
+/* Priorität 1 ab 320px (20em x 16px) anzeigen */
+@media screen and (min-width: 20em) {
+    .customResponsiveTable th.ui-table-priority-1,
+    .customResponsiveTable td.ui-table-priority-1 {
+        display: table-cell;
+    }
+}
+/* Priorität 2 ab 480px (30em x 16px) anzeigen */
+@media screen and (min-width: 30em) {
+    .customResponsiveTable  th.ui-table-priority-2,
+    .customResponsiveTable td.ui-table-priority-2 {
+        display: table-cell;
+    }
+}
+
+/* Manuell verbergen von Spalten */
+.customResponsiveTable th.ui-table-cell-hidden,
+.customResponsiveTable td.ui-table-cell-hidden {
+    display: none;
+}
+
+/* Manually anzeigen von Spalten */
+.customResponsiveTable th.ui-table-cell-visible,
+.customResponsiveTable td.ui-table-cell-visible {
+    display: table-cell;
+}

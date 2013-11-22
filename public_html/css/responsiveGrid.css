@@ -1,0 +1,17 @@
+/*
+    Document   : responsiveGrid
+    Author     : marco.dierenfeldt
+    Description:
+        Steuert die responsive Eigenschaft des Grid.
+*/
+
+@media (max-width: 52em){
+    .responsive-grid .ui-block-a,
+    .responsive-grid .ui-block-b,
+    .responsive-grid .ui-block-c,
+    .responsive-grid .ui-block-d,
+    .responsive-grid .ui-block-e {
+        width: 100%;
+        float:none;
+    }
+}

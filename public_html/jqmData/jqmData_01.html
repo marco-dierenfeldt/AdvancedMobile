@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello Mobile</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <div id="jqmDataPage01" data-role="page">
+
+            <div id="jqmDataPage01Header" data-role="header" data-position="fixed">
+                <a href="#startPage">Start</a>
+                <h3>jqmData Page 1</h3>
+            </div>
+            <div id="jqmDataPage01Content" data-role="content">
+                Laden einer Liste mit der load() Methode von jQuery<br/>
+                <a href="#" id="loadButton2" data-role="button" data-inline="true">load Data</a>
+                <ul id="cityList" data-role="listview" data-inset="true">
+                </ul>
+                <div id="jqmDataPage01_output"></div>
+                <script>
+                    $(document).on("click", "#loadButton", function() {
+                        $("#cityList").load("dynamicData.html", function(responseText, textStatus, XMLHttpRequest) {
+                            $("#cityList").listview("refresh");
+                            $("#jqmDataPage01_output").append("responseText: " + responseText + "<br/>");
+                            $("#jqmDataPage01_output").append("textStatus: " + textStatus + "<br/>");
+                            $("#jqmDataPage01_output").append("XMLHttpRequest:<br/>");
+                            for (var i in XMLHttpRequest) {
+                                $("#jqmDataPage01_output").append("XMLHttpRequest["+i+"]: " + XMLHttpRequest[i]+"<br/>");
+                            }
+                        });
+                    });
+                </script>
+
+            </div>
+            <div id="jqmDataPage01Footer" data-role="footer"
+                 data-position="fixed"></div>
+        </div>
+    </body>
+</html>

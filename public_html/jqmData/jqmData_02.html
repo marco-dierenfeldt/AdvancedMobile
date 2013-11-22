@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello Mobile</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <div id="jqmDataPage02" data-role="page">
+
+            <div id="jqmDataPage02Header" data-role="header" data-position="fixed">
+                <a href="#startPage">Start</a>
+                <h3>jqmData Page 2</h3>
+            </div>
+            <div id="jqmDataPage02Content" data-role="content">
+                Laden einer Liste mit der getJSON() Methode von jQuery
+                <a href="#" id="loadButton2" data-role="button" data-inline="true">get JSON</a>
+                <ul id="cityList2" data-role="listview" data-inset="true">
+                </ul>
+                    <div id="jqmDataPage02_output"></div>
+                <script>
+                    $(document).on("click", "#loadButton2", function(){
+                        jQuery.getJSON( "dynamicData.js" , function( data, textStatus, XMLHttpRequest ){
+                            $("#output").html("Anzahl Datensätze: "+data.cities.length);
+                            for(var i in data.cities){
+                               $("#cityList2").append("<li>"+data.cities[i])+"</li>";
+                            }
+                            $("#cityList2").listview( "refresh" );
+                            $("#jqmDataPage02_output").append("textStatus: "+textStatus+"<br/>");
+                            $("#jqmDataPage02_output").append("XMLHttpRequest:<br/>");
+                            for (var i in XMLHttpRequest) {
+                                $("#jqmDataPage02_output").append("XMLHttpRequest["+i+"]: " + XMLHttpRequest[i]+"<br/>");
+                            }
+                        });
+                    });
+                </script>
+
+            </div>
+            <div id="jqmDataPage02Footer" data-role="footer"
+                 data-position="fixed"></div>
+        </div>
+    </body>
+</html>
