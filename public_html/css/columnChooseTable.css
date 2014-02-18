@@ -29,7 +29,7 @@
     display: none;
 }
 
-/* Manually anzeigen von Spalten */
+/* Manuell anzeigen von Spalten */
 .customResponsiveTable th.ui-table-cell-visible,
 .customResponsiveTable td.ui-table-cell-visible {
     display: table-cell;
