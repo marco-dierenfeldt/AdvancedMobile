@@ -13,12 +13,12 @@
             </div>
             <div id="jqmDataPage01Content" data-role="content">
                 Laden einer Liste mit der load() Methode von jQuery<br/>
-                <a href="#" id="loadButton2" data-role="button" data-inline="true">load Data</a>
+                <a href="#" id="loadButton1" data-role="button" data-inline="true">load Data</a>
                 <ul id="cityList" data-role="listview" data-inset="true">
                 </ul>
                 <div id="jqmDataPage01_output"></div>
                 <script>
-                    $(document).on("click", "#loadButton", function() {
+                    $(document).on("click", "#loadButton1", function() {
                         $("#cityList").load("dynamicData.html", function(responseText, textStatus, XMLHttpRequest) {
                             $("#cityList").listview("refresh");
                             $("#jqmDataPage01_output").append("responseText: " + responseText + "<br/>");

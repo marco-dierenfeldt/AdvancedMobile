@@ -14,7 +14,7 @@
             <div id="jqmDataPage03Content" data-role="content">
                 Laden einer Liste mit jQueryMobile, die vorher lokal abgespeichert wurde mit jqmData()<br/>
                 <a href="#" id="saveButton" data-role="button" data-inline="true">save jqmData</a>
-                <a href="#" id="loadButton2" data-role="button" data-inline="true">load jqmData</a>
+                <a href="#" id="loadButton3" data-role="button" data-inline="true">load jqmData</a>
                 <ul id="cityList3" data-role="listview" data-inset="true">
                 </ul>
                     <div id="output"></div>
@@ -23,9 +23,11 @@
                         var localData = ["München","Stuttgart","Frankfurt","Coburg","Dresden","Berlin"];
                         $("#startPage").jqmData("cities", localData);
                     });
-                    $(document).on("click", "#loadButton2", function(){
+                    $(document).on("click", "#loadButton3", function(){
                         var data = $("#startPage").jqmData("cities");
-                        alert(data.length);
+                        // Leert den Inhalt der Liste, bevor der geladene Inhalt eingefügt wird.
+                        $("#cityList3").html("");
+//                        alert(data.length);
                         for(var i in data){
                             $("#cityList3").append("<li>"+data[i]+"</li>");
                         }
