@@ -3,9 +3,6 @@
     <head>
         <title>Hello Mobile</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="css/libs/jquery.mobile-1.3.0.css" rel="stylesheet" type="text/css"/>
-        <script src="js/libs/jquery-1.9.1.js" type="text/javascript"></script>
-        <script src="js/libs/jquery.mobile-1.3.0.js" type="text/javascript"></script>
     </head>
     <body>
         <div id="sliderPage02" data-role="page">
@@ -15,42 +12,45 @@
                 <h3>Slider Page 2</h3>
             </div>
             <div id="sliderPage02Content" data-role="content">
-                <select data-role="slider">
+                <select data-role="flipswitch">
                     <option value="off">Aus</option>
                     <option value="on">Ein</option>
                 </select>
                 <br/>
-                <select data-role="slider" data-mini="true">
+                <select data-role="flipswitch" data-mini="true">
                     <option value="off">Aus</option>
                     <option value="on">Ein</option>
                 </select>
                 <br/>
-                <select data-role="slider" data-theme="b" data-mini="true">
+                <select data-role="flipswitch" data-theme="b" data-mini="true">
                     <option value="off">Aus</option>
                     <option selected value="on">Ein</option>
                 </select>
                 <br/>
-                <select data-role="slider" data-track-theme="a" data-theme="b"
+                <select data-role="flipswitch" data-track-theme="a" data-theme="b"
                         data-mini="true">
                     <option value="off">Aus</option>
                     <option value="on">Ein</option>
                 </select>
                 <br/>
-                <select data-role="slider" data-mini="true">
+                <select data-role="flipswitch" data-mini="true">
                     <option value="male">Mann</option>
                     <option value="female">Frau</option>
                 </select>
                 <br/>
-                <select data-role="slider" data-mini="true" disabled="">
+                <select data-role="flipswitch" data-mini="true" disabled="">
                     <option value="yes">Ja</option>
                     <option value="no">Nein</option>
                 </select>
                 <br/>
-                <select data-role="slider" data-mini="true">
+                <select data-role="flipswitch" data-mini="true">
                     <option value="yes">Diplominformatiker</option>
                     <option value="no">Diplomingenieur</option>
                 </select>
                 <br/>
+                <input type="checkbox" id="checkbox-flipswitch-basic" data-role="flipswitch"/>
+                <br/>
+                <input type="checkbox" id="checkbox-flipswitch-advanced" data-role="flipswitch" data-on-text="Ein" data-off-text="Aus"/>
             </div>
             <div id="sliderPage02Footer" data-role="footer"
                  data-position="fixed"></div>
